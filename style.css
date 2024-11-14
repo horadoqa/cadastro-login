@@ -1,3 +1,4 @@
+/* Reset de margin e padding para o body */
 body {
     display: flex;
     flex-direction: column; /* Para empilhar os elementos verticalmente */
@@ -26,7 +27,8 @@ body::before {
 }
 
 .image-container {
-    margin-bottom: 20px; /* Espaço entre a imagem e o container de login */
+    margin-bottom: 20px; /* Espaço entre a imagem e o container de cadastro */
+    text-align: center;
 }
 
 .image-container img {
@@ -40,7 +42,8 @@ body::before {
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    width: 300px;
+    width: 100%; /* Ajuste para preencher a largura disponível */
+    max-width: 400px; /* Limita o tamanho máximo para um layout mais limpo */
     text-align: center;
     z-index: 2;
 }
@@ -49,9 +52,10 @@ h2 {
     color: #fff; /* Branco */
     margin-bottom: 20px;
     text-transform: uppercase; /* Coloca o texto em maiúsculas */
+    font-size: 24px;
 }
 
-input[type="name"],
+input[type="text"],
 input[type="email"],
 input[type="password"] {
     width: calc(100% - 20px); /* Proporcional às bordas */
@@ -63,7 +67,7 @@ input[type="password"] {
     transition: border-color 0.3s;
 }
 
-input[type="name"]:focus,
+input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
     border-color: #fff; /* Branco ao focar */
@@ -71,28 +75,11 @@ input[type="password"]:focus {
 }
 
 button {
-    width: auto; /* Botão menor */
-    padding: 10px 20px;
+    width: 100%; /* O botão agora ocupa toda a largura do container */
+    padding: 12px;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-    float: right; /* Alinhar à direita */
-}
-
-button:hover {
-    background-color: #058509; /* Cinza mais escuro ao passar o mouse */
-}
-
-#error-message {
-    color: red; /* Vermelho para mensagens de erro */
-    margin-top: 10px;
-    display: none; /* Oculta inicialmente */
-}
-
-#error-message.error {
-    display: block; /* Exibe mensagem de erro quando houver erro */
-}
+    font-siz
