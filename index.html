@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hora do QA - Login</title>
+    <title>Hora do QA</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
 </head>
@@ -11,6 +11,20 @@
     <div class="image-container">
         <img src="hqa.png" alt="HQA">
         <h2>Hora do QA</h2>
+        <!-- Adicionando botões de login e cadastro -->
+        <div class="action-buttons">
+            <button class="btn-cadastrar" onclick="window.location.href='cadastro.html'">Cadastrar</button>
+            <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+        </div>
+    </div>
+
+    <div class="cadastro-container">
+        <h2>CADASTRO</h2>
+        <input type="name" id="name" placeholder="Nome" required>
+        <input type="email" id="username" placeholder="E-mail" required>
+        <input type="password" id="password" placeholder="Senha" required>
+        <button onclick="cadastrar()">Cadastrar</button>
+        <p id="error-message" class="error"></p>
     </div>
 
     <div class="login-container">
@@ -19,9 +33,9 @@
         <input type="password" id="password" placeholder="Senha" required>
         <button onclick="login()">Entrar</button>
         <p id="error-message" class="error"></p>
-        <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
     </div>
 
+    <!-- Link para o arquivo JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
