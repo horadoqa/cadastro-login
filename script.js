@@ -4,6 +4,26 @@ const validUsers = {
     "usuario2@example.com": "1q2w3e4r"
 };
 
+function cadastro() {
+    const name = document.getElementById("name").value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const errorMessage = document.getElementById("error-message");
+
+    // Verifica se todos os campos estão preenchidos
+    if (name === "" || username === "" || password === "") {
+        errorMessage.textContent = "Os campos são obrigatórios";
+        errorMessage.classList.add("error");
+        errorMessage.classList.remove("success");  // Remove a classe de sucesso, se houver
+    } else {
+        // Caso todos os campos estejam preenchidos
+        errorMessage.textContent = "Cadastro realizado com sucesso!";
+        errorMessage.classList.remove("error");  // Remove a classe de erro, se houver
+        errorMessage.classList.add("success");  // Adiciona a classe de sucesso
+    }
+}
+
+// Função de login (não alterada)
 function login() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
