@@ -4,7 +4,10 @@ const validUsers = {
     "usuario2@example.com": "1q2w3e4r"
 };
 
-function cadastro() {
+function cadastro(event) {
+    // Previne o envio padrão do formulário
+    event.preventDefault();
+
     const name = document.getElementById("name").value;
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
@@ -51,3 +54,9 @@ document.addEventListener("keydown", function(event) {
         login();
     }
 });
+
+// Se necessário, adicione o evento de submit ao formulário de cadastro
+const cadastroForm = document.getElementById("cadastro-form");
+if (cadastroForm) {
+    cadastroForm.addEventListener("submit", cadastro); // Chama a função cadastro ao enviar o formulário
+}
