@@ -1,34 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro e Login</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do QA - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <div class="tabs">
-      <div id="tab-cadastro" class="active" onclick="toggleTab('cadastro')">Cadastro</div>
-      <div id="tab-login" onclick="toggleTab('login')">Login</div>
+    <div class="image-container">
+        <img src="hqa.png" alt="HQA">
+        <h2>Hora do QA</h2>
     </div>
 
-    <div id="form-cadastro" class="form-container">
-      <h3>Cadastro de Usuário</h3>
-      <input type="text" id="nome" placeholder="Nome" required>
-      <input type="email" id="email-cadastro" placeholder="E-mail" required>
-      <input type="password" id="senha-cadastro" placeholder="Senha" required>
-      <button onclick="cadastrarUsuario()">Cadastrar</button>
+    <div class="login-container">
+        <h2>LOGIN</h2>
+        <input type="email" id="username" placeholder="E-mail" required>
+        <input type="password" id="password" placeholder="Senha" required>
+        <button onclick="login()">Entrar</button>
+        <p id="error-message" class="error"></p>
+        <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
     </div>
 
-    <div id="form-login" class="form-container" style="display: none;">
-      <h3>Login</h3>
-      <input type="email" id="email-login" placeholder="E-mail" required>
-      <input type="password" id="senha-login" placeholder="Senha" required>
-      <button onclick="loginUsuario()">Entrar</button>
-    </div>
-  </div>
-
-  <script src="script.js"></script> <!-- Link para o arquivo JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
