@@ -51,6 +51,7 @@ h2 {
     text-transform: uppercase; /* Coloca o texto em maiúsculas */
 }
 
+input[type="name"],
 input[type="email"],
 input[type="password"] {
     width: calc(100% - 20px); /* Proporcional às bordas */
@@ -62,6 +63,7 @@ input[type="password"] {
     transition: border-color 0.3s;
 }
 
+input[type="name"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
     border-color: #fff; /* Branco ao focar */
