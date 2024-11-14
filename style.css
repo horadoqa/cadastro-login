@@ -48,7 +48,7 @@ body::before {
     z-index: 2;
 }
 
-h2 {
+h1, h2 {
     color: #fff; /* Branco */
     margin-bottom: 20px;
     text-transform: uppercase; /* Coloca o texto em maiúsculas */
