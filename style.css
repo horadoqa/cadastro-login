@@ -27,7 +27,6 @@ body::before {
 
 .image-container {
     margin-bottom: 20px; /* Espaço entre a imagem e o container de login */
-    text-align: center;
 }
 
 .image-container img {
@@ -35,43 +34,7 @@ body::before {
     height: auto; /* Mantém a proporção da imagem */
 }
 
-h2 {
-    color: #fff; /* Branco */
-    margin-bottom: 10px;
-    text-transform: uppercase; /* Coloca o texto em maiúsculas */
-}
-
-.action-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Espaço entre os botões */
-    margin-top: 20px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #058509; /* Cinza mais escuro ao passar o mouse */
-}
-
-.btn-cadastrar {
-    background-color: #FF5733; /* Cor personalizada para o botão de cadastro */
-}
-
-.btn-cadastrar:hover {
-    background-color: #d04c2a; /* Cor mais escura ao passar o mouse no botão de cadastro */
-}
-
-.login-container, .cadastro-container {
+.cadastro-container {
     position: relative;
     background: rgba(255, 255, 255, 0.1);
     padding: 40px;
@@ -82,9 +45,14 @@ button:hover {
     z-index: 2;
 }
 
+h2 {
+    color: #fff; /* Branco */
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Coloca o texto em maiúsculas */
+}
+
 input[type="email"],
-input[type="password"],
-input[type="name"] {
+input[type="password"] {
     width: calc(100% - 20px); /* Proporcional às bordas */
     padding: 12px;
     margin: 10px 0;
@@ -95,10 +63,26 @@ input[type="name"] {
 }
 
 input[type="email"]:focus,
-input[type="password"]:focus,
-input[type="name"]:focus {
+input[type="password"]:focus {
     border-color: #fff; /* Branco ao focar */
     outline: none; /* Remove a borda padrão do navegador */
+}
+
+button {
+    width: auto; /* Botão menor */
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    float: right; /* Alinhar à direita */
+}
+
+button:hover {
+    background-color: #058509; /* Cinza mais escuro ao passar o mouse */
 }
 
 #error-message {
